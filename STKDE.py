@@ -12,10 +12,8 @@ xRes = 10        # x resolution in meters
 yRes = 10        # y resolution in meters
 tRes = 10         # t resolution in days
 
-gDir = r"V:\Users\ahohl\Applications\Resch20180210"		# general directory
-
 # Read coordinates of point events 
-fData = open(gDir + os.sep + "pointFiles" + os.sep + "data.txt", "r")
+fData = open("pointFiles" + os.sep + "data.txt", "r")
 
 xytList = []
 for line in fData:
@@ -29,14 +27,13 @@ for line in fData:
 fData.close()
 
 # Read subdomain boundaries
-fBound = open(gDir + os.sep + "boundaryFiles" + os.sep + "data_bds.txt", "rU")              	
+fBound = open("boundaryFiles" + os.sep + "data_bds.txt", "rU")              	
 inBound = fBound.read()
 inBoundList = inBound.split(",")             
 fBound.close()
 
-# Create output file
-outF = gDir + os.sep + "stkdeFiles" + os.sep + "stkde_data.txt"    
-outFile = open(outF, "w")       
+# Create output file  
+outFile = open("stkdeFiles" + os.sep + "stkde_data.txt" , "w")       
 
 # number of point events
 n = len(xytList)
