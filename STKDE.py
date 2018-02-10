@@ -1,5 +1,5 @@
-import math, os, sys, glob
-import numpy as np
+import math, os
+
 
 # Kernel parameters
 hs = 25     # spatial bandwidth in meters
